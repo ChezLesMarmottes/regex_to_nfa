@@ -1,0 +1,11 @@
+build/
+*.o
+*.d
+*.out
+*.exe
+*.log
+*.lst
+compile_commands.json
+.vscode/
+.idea/
+.DS_Store
