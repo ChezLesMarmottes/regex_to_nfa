@@ -1,16 +1,29 @@
+#include <stdbool.h>
+#include <stdlib.h>
+
 #include "struct_nfa.h"
 #include "new_state.h"
 #include "add_transition.h"
 
-NFA literal(char t) {
-    State* s = new_state();
-    State* a = new_state();
+bool literal(char transition, NFA* out_result) {
+    if (out_result == NULL) {
+        return false;
+    }
 
-    add_transition(s, t, a);
+    State* start = new_state();
+    State* accept = new_state();
 
-    NFA result;
-    result.start = s;
-    result.accept = a;
+    if (start == NULL || accept == NULL) goto fail;
 
-    return result;
+    if (!add_transition(start, transition, accept)) goto fail;
+
+    out_result->start = start;
+    out_result->accept = accept;
+
+    return true;
+
+fail:
+    free(start);
+    free(accept);
+    return false;
 }

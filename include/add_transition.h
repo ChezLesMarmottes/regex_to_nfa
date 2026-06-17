@@ -3,6 +3,6 @@
 
 #include "struct_state.h"
 
-void add_transition(State* start, char transition, State* accept);
+bool add_transition(State* from, char symbol, State* to);
 
 #endif
