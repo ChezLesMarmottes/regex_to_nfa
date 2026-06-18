@@ -4,6 +4,7 @@
 #include "struct_nfa.h"
 #include "add_transition.h"
 #include "constants.h"
+#include "new_state.h"
 
 bool star(NFA* a, NFA* out_result) {
     if (a == NULL || out_result == NULL) {

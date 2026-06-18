@@ -5,7 +5,7 @@
 
 #define MAX_TRANSITIONS 64
 
-typedef struct {
+typedef struct State {
     int id;
     int count;
     Transition transitions[MAX_TRANSITIONS];

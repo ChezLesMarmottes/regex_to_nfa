@@ -4,8 +4,9 @@
 #include "struct_nfa.h"
 #include "add_transition.h"
 #include "constants.h"
+#include "new_state.h"
 
-bool alternate(NFA* a, NFA* b, NFA* out_result) {
+bool choose(NFA* a, NFA* b, NFA* out_result) {
     if (a == NULL || b == NULL || out_result == NULL) {
         return false;
     }

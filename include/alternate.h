@@ -1,10 +1,10 @@
-#ifndef ALTERNATE_H
-#define ALTERNATE_H
+#ifndef CHOOSE_H
+#define CHOOSE_H
 
 #include <stdbool.h>
 
 #include "struct_nfa.h"
 
-bool alternate(NFA* a, NFA* b, NFA* out_result);
+bool choose(NFA* a, NFA* b, NFA* out_result);
 
 #endif

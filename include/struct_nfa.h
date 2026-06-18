@@ -3,7 +3,7 @@
 
 #include "struct_state.h"
 
-typedef struct {
+typedef struct NFA{
     State* start;
     State* accept;
 } NFA;
