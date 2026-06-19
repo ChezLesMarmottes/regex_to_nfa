@@ -7,6 +7,8 @@
 
 #include "struct_parser.h"
 
+bool is_literal(char c);
+
 bool parse_expr(Parser* regex, NFA* out_result);
 
 bool parse_term(Parser* regex, NFA* out_result);
